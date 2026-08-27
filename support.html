@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDViewer Support</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6e6e73;
+    --accent: #0066cc;
+    --border: #e5e5ea;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1e;
+      --text: #f5f5f7;
+      --muted: #a1a1a6;
+      --accent: #4da3ff;
+      --border: #3a3a3c;
+      --card: #2c2c2e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header.page {
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 2.1em;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 1.05em;
+    margin: 0;
+  }
+  nav.crumbs {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9em;
+    margin-bottom: 32px;
+  }
+  nav.crumbs a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  nav.crumbs a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  nav.crumbs a.current {
+    color: var(--text);
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.25em;
+    margin: 40px 0 12px;
+    letter-spacing: -0.005em;
+  }
+  p { margin: 0 0 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 1em;
+  }
+  .card p { margin: 0; color: var(--muted); }
+  a.email {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a.email:hover { text-decoration: underline; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-size: 1em;
+    margin: 0 0 6px;
+  }
+  .faq-item p {
+    color: var(--muted);
+    margin: 0;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="terms.html">Terms &amp; EULA</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html" class="current">Support</a>
+    </nav>
+
+    <header class="page">
+      <h1>MDViewer Support</h1>
+      <p class="subtitle">Help with the MDViewer app for macOS.</p>
+    </header>
+
+    <div class="card">
+      <h3>Contact us</h3>
+      <p>For bug reports, feature requests, or any questions about MDViewer, email
+        <a class="email" href="mailto:alice.turcanu91@gmail.com">alice.turcanu91@gmail.com</a>.
+        We typically respond within 2–3 business days.</p>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>What is MDViewer?</h3>
+      <p>MDViewer is a native macOS app for viewing and editing Markdown files, with a workspace file browser, live preview, syntax highlighting, and export options.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does MDViewer require an internet connection?</h3>
+      <p>No. MDViewer works entirely offline. All files you open stay on your Mac, and the app does not send your documents anywhere.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What file types does MDViewer support?</h3>
+      <p>MDViewer opens Markdown files (.md, .markdown, .mdown, .mkd) and plain text files, and can export documents to other formats from within the app.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I open a folder as a workspace?</h3>
+      <p>Use File → Open Workspace (or drag a folder onto the app icon) to browse and edit every Markdown file in that folder from the sidebar.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>I found a bug. How do I report it?</h3>
+      <p>Email <a class="email" href="mailto:alice.turcanu91@gmail.com">alice.turcanu91@gmail.com</a> with a description of the issue, your macOS version, and the MDViewer version (found under MDViewer → About MDViewer). Screenshots or a sample file that reproduces the problem are very helpful.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I suggest a new feature?</h3>
+      <p>Yes — feature requests are welcome at the same email address above.</p>
+    </div>
+
+    <h2>Before you contact us</h2>
+    <p>Make sure you're running the latest version of MDViewer from the Mac App Store, and that your macOS is up to date. Many display or performance issues are resolved by updating both.</p>
+
+    <footer>
+      <p>MDViewer &middot; <a class="email" href="mailto:alice.turcanu91@gmail.com" style="color:inherit;">alice.turcanu91@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
