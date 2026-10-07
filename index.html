@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDViewer — a native Markdown reader and editor for macOS</title>
+<meta name="description" content="MDViewer opens any Markdown file and shows it properly formatted: headings, tables, images and highlighted code. Edit in place, export to PDF or HTML, and search a whole folder. Native macOS app, no account, no tracking.">
+<meta property="og:title" content="MDViewer — Markdown reader and editor for macOS">
+<meta property="og:description" content="Read, edit and export Markdown on your Mac. No account, no cloud, no tracking.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6e6e73;
+    --accent: #0066cc;
+    --border: #e5e5ea;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1e;
+      --text: #f5f5f7;
+      --muted: #a1a1a6;
+      --accent: #4da3ff;
+      --border: #3a3a3c;
+      --card: #2c2c2e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  nav.crumbs {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9em;
+    margin-bottom: 32px;
+  }
+  nav.crumbs a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  nav.crumbs a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  nav.crumbs a.current {
+    color: var(--text);
+    font-weight: 600;
+  }
+  header.page { margin-bottom: 40px; }
+  h1 {
+    font-size: 2.1em;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 1.05em;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.25em;
+    margin: 40px 0 12px;
+    letter-spacing: -0.005em;
+  }
+  p { margin: 0 0 14px; }
+  .lede { font-size: 1.08em; }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 24px 0 8px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 1em;
+  }
+  .card p { margin: 0; color: var(--muted); }
+  ul { margin: 0 0 14px; padding-left: 20px; color: var(--muted); }
+  li { margin-bottom: 6px; }
+  a.email {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a.email:hover { text-decoration: underline; }
+  .req {
+    color: var(--muted);
+    font-size: 0.95em;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="index.html" class="current">MDViewer</a>
+      <a href="terms.html">Terms &amp; EULA</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </nav>
+
+    <header class="page">
+      <h1>MDViewer</h1>
+      <p class="subtitle">A native Markdown reader and editor for macOS.</p>
+    </header>
+
+    <p class="lede">MDViewer opens any Markdown file and shows it the way it was meant to be read:
+      real headings, clean typography, syntax-highlighted code, proper tables, and images in place.
+      When something needs changing, switch to the editor, type, and save straight back to the file
+      on disk.</p>
+
+    <p>It is a native macOS app — not a browser in a wrapper. No account, no subscription,
+      no internet connection, and nothing about your documents ever leaves your Mac.</p>
+
+    <div class="features">
+      <div class="card">
+        <h3>Read</h3>
+        <p>Headings, lists, tables, block quotes, links, images, and code highlighted in 18 languages. Adjustable text size and content width, light or dark.</p>
+      </div>
+      <div class="card">
+        <h3>Browse a folder</h3>
+        <p>Open a whole folder and move between its Markdown files from the sidebar. Filter by name, or search the text inside every document in it.</p>
+      </div>
+      <div class="card">
+        <h3>Edit in place</h3>
+        <p>A real editor with highlighted source, live preview alongside it, and formatting shortcuts. Saving writes back to the original file.</p>
+      </div>
+      <div class="card">
+        <h3>Export and share</h3>
+        <p>Export as PDF or HTML, copy as rich text, copy the HTML source, or print exactly what you see on screen.</p>
+      </div>
+    </div>
+
+    <h2>Privacy</h2>
+    <p>MDViewer collects nothing. There are no accounts, no analytics, no advertising, and no network
+      features at all — even images hosted on the web are never fetched; they appear as a placeholder
+      you can choose to open in your browser. The app is sandboxed and only ever touches the files and
+      folders you open yourself. Full details are in the
+      <a class="email" href="privacy.html">privacy policy</a>.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>macOS 15 or later</li>
+      <li>Apple silicon or Intel</li>
+      <li>Opens <code>.md</code>, <code>.markdown</code>, <code>.mdown</code>, <code>.mkd</code> and plain text files</li>
+    </ul>
+
+    <h2>Support</h2>
+    <p>Questions, bugs and feature requests go to
+      <a class="email" href="mailto:alice.turcanu91@gmail.com">alice.turcanu91@gmail.com</a>,
+      or see the <a class="email" href="support.html">support page</a>.</p>
+
+    <footer>
+      <p>MDViewer &middot; <a class="email" href="mailto:alice.turcanu91@gmail.com" style="color:inherit;">alice.turcanu91@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
